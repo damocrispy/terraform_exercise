@@ -1,0 +1,12 @@
+#Terraform Exercise
+##Scope
+* A private S3 bucket
+* An ASG with a single EC2 instance in it's own dedicated VPC. You can use the latest Amazon Linux 2 AMI.
+* Create an SSH key-pair to allow you to access the instance.
+* Ensure the instance is only accessible from the internet on port 80 and port 22.
+* Create an Application Load Balancer and attach it's target group to the ASG created above.
+* Ensure the instance is accessible using the ALB DNS name on port 80
+* Allow the ALB to write access logs to the same bucket
+* Using an IAM instance role, allow the instance to be able to read and write to the bucket created above
+* Add autoscaling rules based on Cloudwatch CPU percentage
+* Destroy all of the above infrastructure
